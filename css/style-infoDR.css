@@ -16,7 +16,6 @@
     --bg-color-2: #fff;
     --bg-color-3: hsl(var(--hue-1), 73%, 98%);
     --bg-color-transparent: rgba(255, 255, 255, 0.821);
-    --heading--color: ;
     --text-color: hsl(var(--hue-2), 83%, 30%);
 
 }
@@ -215,9 +214,17 @@ nav.scrolled .logo{
     padding-bottom: 30px;
 }
 
-/* .hospital{
-    padding-bottom: 20px;
-} */
+.phong-kham,
+.email-box,
+.sdt-box {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    font-size: 16px;
+    margin: 10px 0;
+}
+
 
 .chuyen-khoa{
     display: flex;
@@ -237,6 +244,10 @@ p.khoa{
     font-weight: 500;
     background-color: var(--bg-color-1);
 
+}
+
+p.cost{
+    margin: 10px 0;
 }
 
 span{
