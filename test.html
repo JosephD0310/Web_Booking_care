@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#000000">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    
+  </head>
+  <body>
+    <label for="date">Ngày:</label>
+<input type="date" id="date">
+<br>
+<label for="time">Giờ:</label>
+<select id="time">
+  <option value="" disabled selected>Chọn giờ</option>
+  <option value="09:00">09:00</option>
+  <option value="13:00">13:00</option>
+  <option value="18:00">18:00</option>
+</select>
+<br>
+<div id="ticketInfo" style="display: none;">
+  <h2>Thông tin vé</h2>
+  <p><i class="uil uil-check-circle"></i></p>
+  <p id="selectedDate"></p>
+  <p id="selectedTime"></p>
+</div>
+
+  </body>
+  <script src="./js/test.js"></script>
+
+</html>

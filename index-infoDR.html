@@ -48,18 +48,85 @@
     </header>
 
     <main>
-        <section class="showcase-intro">
+        <section class="showcase-area">
             <div class="container">
-                <div class="intro-info">
-                    <h2 class="name">PGS.TS Đỗ Thùy Dương</h2>
-                    
+                <div class="dr-image">
+                    <div class="image"></div>
                 </div>
-                <div class="intro-image"></div>
+                <div class="dr-info">
+                    <h2 class="dr-name">PGS.TS Đỗ Thùy Dương</h2>
+                    <div class="hospital">
+                        <p class="hospital-name"> <i class="uil uil-map-marker"></i> Bệnh viện Zương Zương</p>
+                        <p class="text">Số 1 Đại Cồ Việt, Hai Bà Trưng, Hà Nội</p>
+                    </div>
+                    <div class="chuyen-khoa">
+                        <p class="khoa">Chuyên khoa Tai Mũi Họng</p>
+                    </div>
+                    <p class="cost">Giá khám : <span>500.000đ</span></p>
+                    <div class="opt">
+                        <a href="#booking" class="btn">Đặt lịch ngay <i class="uil uil-arrow-circle-right"></i></a>
+                        <a href="#info-dr" class="btn secondary-btn">Thông tin</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="booking" id="booking">
+            <div class="container">
+                <div class="head">
+                    <div class="icon-schedule">
+                        <i class="uil uil-schedule"></i>
+                        <div class="head-text open">GIỜ LÀM VIỆC</div>
+                    </div>
+                    <div class="open-time">
+                        <div class="head-text">Thứ Hai - Thứ Sáu</div>
+                        <i class="uil uil-clock-nine"></i>
+                        <div class="head-text">8:00 - 16:00</div>
+                    </div>
+                </div>
+                <div class="schedule">
+                    <div class="text">Lịch khám tại viện:</div>
+                    <div class="schedule-box">
+                        <input type="date" id="date" >
+                        <div class="shift-opt">
+                            <button class="shift" onclick="activeShift()" value="1">08:00 - 09:00</button>
+                            <button class="shift" onclick="activeShift()" value="2">09:00 - 10:00</button>
+                            <button class="shift" onclick="activeShift()" value="3">10:00 - 11:00</button>
+                            <button class="shift" onclick="activeShift()" value="4">14:00 - 15:00</button>
+                            <button class="shift" onclick="activeShift()" value="5">15:00 - 16:00</button>
+                        </div>
+                    </div>
+                    <div class="container-service" id="serviceInfo" style="display: none;">
+                        <div class="service-icon"><i class="uil uil-check-circle"></i> Thông tin dịch vụ</div>
+                        <div class="service-text">
+                            <span id="service-label"></span>
+                            <span id="service-price"></span>
+                        </div>
+                        <button class="submit" type="submit">
+                            <div class="submit-icon"><i class="uil uil-stethoscope-alt"></i></div>
+                            <div class="submit-text">Đặt khám <br> <span>Tại cơ sở y tế</span></div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="info-dr" id="info-dr">
+            <div class="container">
+                <h3>KINH NGHIỆM KHÁM CHỮA BỆNH</h3>
+            <div class="duty">Trưởng Khoa Tai - Mũi - Họng Bệnh viện Zương Zương</div>
+            <div class="pros">Thế mạnh chuyên môn:
+                <ul>
+                    <li>Chữa các bệnh vùng Tai- Mũi - Hong: viêm tai, viêm mũi xoang, viêm họng, viêm loét họng, miệng, tăng tiết nước bọt vùng khoang miệng... bệnh lý các khối u vùng đầu mặt cổ</li>
+                    <li>Chuyên gia về trị liệu giọng nói cho những người làm các nghề liên quan đến giọng như phát thanh viên, ca sĩ, giáo viên...</li>
+                    <li>Các rối loạn giọng sau phẫu thuật</li>
+                    <li>Chuyên gia điều trị chóng mặt, rối loạn thăng bằng, ù tai</li>
+                    <li>Điều trị các đau mạn tính vùng sọ mặt, vùng lưỡi</li>
+                </ul>
+            </div>
             </div>
         </section>
     </main>
 
-    <!-- <footer>
+    <footer>
         <div class="container">
             <a href="#" class="logo">
                 <img src="./assets/ava_v2.png" title="Booking Health Care Web"/>
@@ -76,7 +143,7 @@
                 </li>
             </ul>
         </div>
-    </footer> -->
+    </footer>
 
     <!-- JavaScript Files -->
 

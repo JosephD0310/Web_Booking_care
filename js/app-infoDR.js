@@ -8,35 +8,52 @@ function stickyNavbar () {
 }
 window.addEventListener("scroll", stickyNavbar)
 
-/* ---------------------  Pagination Bar --------------------- */
-let list_link = document.getElementsByClassName("list-link");
+/* --------------------- Schedule Box--------------------- */
 
-let currentValue = 1;
+const today = new Date();
+const next_day = new Date();
+const dateInput = document.getElementById("date");
+const shift = document.getElementsByClassName("shift");
+const serviceInfo = document.getElementById("serviceInfo");
+const service_label = document.getElementById("service-label");
+const service_price = document.getElementById("service-price");
 
-function activeLink(){
-    for(l of list_link){
-        l.classList.remove("active");   
-    }
+// Cộng thêm 7 ngày
+next_day.setDate(today.getDate() + 7);
+
+// Lấy số thứ tự của ngày hiện tại
+var current_day = today.getDay();
+var default_date = today.toISOString().split("T")[0];
+var lastValue = default_date;
+
+// Đặt giá trị mặc định cho input date
+dateInput.value = default_date;
+dateInput.min = today.toISOString().split("T")[0];
+dateInput.max = next_day.toISOString().split("T")[0];
+
+
+/* --------------------- Shift Option--------------------- */
+
+
+let current_shift = 0;
+
+dateInput.addEventListener("input", function() {
+    // Reset giá trị lựa chọn ca và ẩn thông tin dịch vụ
+    for(s of shift){
+        s.classList.remove("active");
+    };
+    serviceInfo.style.display = "none";
+  });
+
+function activeShift(){
+    for(s of shift){
+        s.classList.remove("active");
+    };
     event.target.classList.add("active");
-    currentValue = event.target.value;
+    current_shift = event.target.value;
+
+    service_label.textContent = "Khám theo yêu cầu chuyên khoa Tai - Mũi - Họng";
+    service_price.textContent = "500.000 đ";
+    serviceInfo.style.display = "block";
 }
 
-function backBtn(){
-    if (currentValue > 1){
-        for(l of list_link){
-            l.classList.remove("active");   
-        }
-        currentValue--;
-        list_link[currentValue - 1].classList.add("active");
-    }
-}
-
-function nextBtn(){
-    if (currentValue < 5){
-        for(l of list_link){
-            l.classList.remove("active");   
-        }
-        currentValue++;
-        list_link[currentValue - 1].classList.add("active");
-    }
-}
