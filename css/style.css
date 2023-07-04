@@ -1,6 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Mulish:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400&display=swap');
 /* ---------------------  Website Theme --------------------- */
 
 :root{
@@ -168,18 +167,9 @@ nav.scrolled .logo{
 
 
 /* ---------------------  Showcase Area Styles --------------------- */
-/* .showcase-area{
-    overflow-x: hidden;
-    background-color: var(--bg-color);
-    font-family: "Montserrat", sans-serif;
-    background-image: url("https://raw.githubusercontent.com/JosephD0310/Web_Booking_care/main/assets/photo7.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    opacity: 10;
-} */
 
 .showcase-area{
-    /* padding: 90px 0; */
+    padding: 90px 0;
     width: 100%;
     overflow: hidden;
 }
@@ -192,12 +182,11 @@ nav.scrolled .logo{
 }
 
 .showcase-area .container{
-    background-repeat: no-repeat;
-    background-size: cover;
+
 }
 
 .showcase-area .showcase-info{
-    padding: 50px;
+    padding: 50px 0;
 }
 
 .sub-heading{
