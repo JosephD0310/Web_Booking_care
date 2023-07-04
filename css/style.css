@@ -169,7 +169,7 @@ nav.scrolled .logo{
 /* ---------------------  Showcase Area Styles --------------------- */
 
 .showcase-area{
-    padding: 90px 0;
+    /* padding: 90px 0; */
     width: 100%;
     overflow: hidden;
 }
@@ -186,7 +186,7 @@ nav.scrolled .logo{
 }
 
 .showcase-area .showcase-info{
-    padding: 50px 0;
+    padding: 50px;
 }
 
 .sub-heading{
