@@ -1,6 +1,6 @@
 
 
-const nav = document.querySelector("nav.container");
+const nav = document.querySelector("nav.nav-bar");
 
 /* ---------------------  Sticky Navbar --------------------- */
 

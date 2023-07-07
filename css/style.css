@@ -6,6 +6,7 @@
     --hue-1: 150;
     --hue-2: 219;
     --bg-color: hsl(var(--hue-1), 73%, 97%);
+    --main-color-soft: #f2fdf8;
     --main-color-1: hsl(var(--hue-1), 68%, 50%);
     --main-color-dark-1: hsl(var(--hue-1), 71%, 39%);
     --main-color-2: hsl(var(--hue-2), 64%, 39%);
@@ -27,19 +28,23 @@
     margin: 0;
     box-sizing: border-box;
     font-family: "Montserrat", sans-serif;
+    outline: none; border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    scrollbar-color: var(--main-color-1) var(--main-color-soft);
+    scrollbar-width: thin;
 }
 
 html{
     font-size: 62,5%;
     overflow-x: hidden ;
     scroll-behavior: smooth;
-    scroll-padding-top: 10rem;
+    scroll-padding-top: 5px;
 }
 
 body{
     overflow-x: hidden;
     background-color: var(--bg-color);
-    font-family: "Montserrat", sans-serif;
     background-image: url('https://raw.githubusercontent.com/JosephD0310/Web_Booking_care/main/assets/bg-main.png');
     background-attachment: fixed;
     background-size: cover;
@@ -52,6 +57,21 @@ body{
     color: #fff;
 }
 
+*::-webkit-scrollbar{
+    height: .5rem;
+    width: 10px;
+ }
+ 
+ *::-webkit-scrollbar-track{
+    border-radius: 10px;
+    background-color: transparent;
+ }
+ 
+ *::-webkit-scrollbar-thumb{
+    border-radius: 10px;
+    background-color:#8bdfb9;
+ }
+
 a{
     text-decoration: none;
 }
@@ -62,7 +82,7 @@ ul{
 
 /* ---------------------  Reusable CSS Code --------------------- */
 
-.info{
+header .info{
     position: relative;
     width: 100%;
     padding: 10px 100px;
@@ -70,10 +90,20 @@ ul{
     background-color: var(--main-color-1);
     color:#fff;
 }
+
+header .nav-bar{
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    background-color: white;
+    color:#fff;
+}
+
 .container{
     position: relative;
     width: 100%;
-    padding: 0 180px;
+    max-width: 1300px;
+    /* padding: 0 180px; */
     margin: 0 auto;
     /* background-color: #fff; */
 }
@@ -98,19 +128,19 @@ header .logo{
 /* ---------------------  Navbar Styles --------------------- */
 
 
+
 nav.scrolled {
     background-color: var(--bg-color-transparent);
     box-shadow: 0 5px 20px 0.1px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur();
 }
 
-nav.container{
+nav .container{
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
     transition: 0.5s;
-    background-color: #fff;
 }   
 
 nav.scrolled .logo{
@@ -172,6 +202,14 @@ nav.scrolled .logo{
     width: 100%;
 }
 
+#menu-btn{
+    font-size: 25px;
+    font-weight: 800;
+    cursor: pointer;
+    color: var(--text-color);
+    display: none;
+}
+
 
 /* ---------------------  Showcase Area Styles --------------------- */
 
@@ -209,9 +247,9 @@ nav.scrolled .logo{
 
 .heading{
     color: #fff;
-    font-style: italic;
+    font-style: italic;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
     font-size: 3rem;
-    line-height: 1.3;
+    line-height: 1.3;                                                                
 }
 
 .showcase-area .container .showcase-logo {
@@ -221,3 +259,114 @@ nav.scrolled .logo{
     max-height: 200px;
 
 }
+
+.showcase-area .container .service{
+    max-width: 900px;
+}
+
+
+.showcase-area .container .service ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.showcase-area .container .service .service-btn{
+    position: relative;
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    border-radius: 20px;
+    margin: 0 1rem;
+    transition: 0.3s;
+}
+
+.showcase-area .container .service .service-btn .text{
+    font-weight: 500;
+    color: var(--text-color);
+    letter-spacing: 0.5px;
+    justify-content: center;
+}
+
+.showcase-area .container .service .service-btn img.icon{
+    width: 50px;
+    height: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ---------------------  Media Queries --------------------- */
+
+@media (max-width:991px){
+
+    html{
+        font-size: 55%;
+    }
+}
+
+@media (max-width:768px){
+
+    #menu-btn{
+        display: inline-block;
+    }
+
+    header .container{
+        position: relative;
+    }
+
+    header .container .links{
+        position: absolute;
+    }
+}
+
+
+@media (max-width:450px){
+
+    html{
+        font-size: 50%;
+    }
+}
+
+
