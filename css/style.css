@@ -108,6 +108,7 @@ header .nav-bar{
     /* background-color: #fff; */
 }
 
+
 .logo img{
     width: 250px;
 }
@@ -218,10 +219,10 @@ nav.scrolled .logo{
     width: 100%;
     height: 800px;
     overflow: hidden;
-    position: relative;
+    position: relative; 
 }
 
-.showcase-area img{
+.showcase-area img.bg-banner{
     position: absolute;
     z-index: -1;
     width: 100%;
@@ -256,7 +257,7 @@ nav.scrolled .logo{
     position: relative;
     left: -200px;
     /* top: -250px; */
-    max-height: 200px;
+    max-width: 700px;
 
 }
 
@@ -270,18 +271,26 @@ nav.scrolled .logo{
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+    /* gap: 10px; */
     width: 100%;
 }
 
 .showcase-area .container .service .service-btn{
-    position: relative;
+    /* position: relative; */
     display: inline-block;
     width: 100px;
     height: 100px;
-    background-color: #fff;
     border-radius: 20px;
+    background-color: white;
     margin: 0 1rem;
+    letter-spacing: 0.5px;
+    color: var(--text-color);
+    font-weight: 500;
     transition: 0.3s;
+}
+
+.showcase-area .container .service .service-btn .icon img{
+    max-width: 80px;
 }
 
 .showcase-area .container .service .service-btn .text{
@@ -291,10 +300,7 @@ nav.scrolled .logo{
     justify-content: center;
 }
 
-.showcase-area .container .service .service-btn img.icon{
-    width: 50px;
-    height: 50px;
-}
+
 
 
 
