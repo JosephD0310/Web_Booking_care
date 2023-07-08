@@ -6,7 +6,7 @@
 :root{
     --hue-1: 150;
     --hue-2: 219;
-    --gradient-color: linear-gradient(90deg, rgba(78,221,149,1) 31%, rgba(15,204,255,1) 100%);
+    --gradient-color: linear-gradient(93deg, rgba(71,189,203,1) 0%, rgba(49,216,133,1) 100%);
     --bg-color: hsl(var(--hue-1), 73%, 97%);
     --main-color-1: hsl(var(--hue-1), 68%, 50%);
     --main-color-dark-1: hsl(var(--hue-1), 71%, 39%);

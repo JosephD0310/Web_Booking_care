@@ -5,6 +5,7 @@
 :root{
     --hue-1: 150;
     --hue-2: 219;
+    --gradient-color: linear-gradient(93deg, rgba(71,189,203,1) 0%, rgba(49,216,133,1) 100%);
     --bg-color: hsl(var(--hue-1), 73%, 97%);
     --main-color-soft: #f2fdf8;
     --main-color-1: hsl(var(--hue-1), 68%, 50%);
@@ -36,7 +37,7 @@
 }
 
 html{
-    font-size: 62,5%;
+    /* font-size: 62.5%; */
     overflow-x: hidden ;
     scroll-behavior: smooth;
     scroll-padding-top: 5px;
@@ -159,25 +160,25 @@ nav.scrolled .logo{
     display: inline-block;
     /* text-transform: uppercase; */
     font-size: 1rem;
-    letter-spacing: 0.5px;
+    /* letter-spacing: 0.5px; */
     color: #fff;
     font-weight: 400;
 }
 
 
-.links ul{
+/* .links ul{
     display: flex;
     align-items: center;
     width: 100%;
-}
+} */
 
 .nav-link{
     position: relative;
     display: inline-block;
-    margin: 0 1rem;
+    margin-right: 1rem;
     /* text-transform: uppercase; */
     font-size: 1rem;
-    letter-spacing: 0.5px;
+    /* letter-spacing: 0.5px; */
     color: var(--text-color);
     font-weight: 520;
     transition: 0.3s;
@@ -204,6 +205,7 @@ nav.scrolled .logo{
 }
 
 #menu-btn{
+    padding-right: 2rem;
     font-size: 25px;
     font-weight: 800;
     cursor: pointer;
@@ -217,7 +219,7 @@ nav.scrolled .logo{
 .showcase-area{
     padding: 90px 0;
     width: 100%;
-    height: 800px;
+    height: 710px;
     overflow: hidden;
     position: relative; 
 }
@@ -231,11 +233,15 @@ nav.scrolled .logo{
 }
 
 .showcase-area .container{
+    max-width: 1300px;
+    text-align: center;
     height: 650px;
+    padding-right: 200px;
 }
 
 .showcase-area .showcase-info{
-    padding: 50px 35px;
+    padding: 20px 40px;
+    margin-top: 30px;
 }
 
 .sub-heading{
@@ -243,7 +249,7 @@ nav.scrolled .logo{
     font-size: 1.5rem;
     font-weight: 500;
     margin-bottom: 1rem;
-    padding-left: 300px;
+    /* padding-left: 300px; */
 }
 
 .heading{
@@ -254,15 +260,12 @@ nav.scrolled .logo{
 }
 
 .showcase-area .container .showcase-logo {
-    position: relative;
-    left: -200px;
-    /* top: -250px; */
-    max-width: 700px;
-
+    max-height: 100px;
+    margin-top: 50px;
 }
 
 .showcase-area .container .service{
-    max-width: 900px;
+    /* max-width: 900px; */
 }
 
 
@@ -278,23 +281,33 @@ nav.scrolled .logo{
 .showcase-area .container .service .service-btn{
     /* position: relative; */
     display: inline-block;
-    width: 100px;
-    height: 100px;
+    width: 125px;
+    height: 125px;
     border-radius: 20px;
     background-color: white;
+    box-shadow: 0 5px 15px 1px rgba(0, 0, 0, 0.1);
+    border: 2px ;
     margin: 0 1rem;
     letter-spacing: 0.5px;
     color: var(--text-color);
     font-weight: 500;
-    transition: 0.3s;
+    transition: .3s;
 }
 
+.showcase-area .container .service .service-btn:hover{
+    transform: scale(1.1);
+    background-color: var(--bg-color);
+    border: 2px solid var(--text-color);    
+}
+
+
 .showcase-area .container .service .service-btn .icon img{
-    max-width: 80px;
+    margin: 5px;
+    max-width: 60px;
 }
 
 .showcase-area .container .service .service-btn .text{
-    font-weight: 500;
+    font-weight: 600;
     color: var(--text-color);
     letter-spacing: 0.5px;
     justify-content: center;
@@ -348,7 +361,7 @@ nav.scrolled .logo{
 @media (max-width:991px){
 
     html{
-        font-size: 55%;
+        font-size: 90%;
     }
 }
 
@@ -358,12 +371,30 @@ nav.scrolled .logo{
         display: inline-block;
     }
 
-    header .container{
+    header .nav-bar .container{
         position: relative;
     }
 
-    header .container .links{
+    header .nav-bar .container .links{
         position: absolute;
+        top: 120%; right: 2rem;
+        background-color: var(--bg-color);
+        backdrop-filter: blur(.4rem);
+        border-radius: .5rem;
+        transform: scale(0);
+        transform-origin: top left ;
+        transition: .2s linear;
+    }
+
+    header .nav-bar .container .links a{
+        display: block;
+        padding: .5rem 1.5rem;
+        margin: 1.5rem .5rem;
+        border-radius: .5rem;
+    }
+
+    header .nav-bar .container .links a::after{
+        
     }
 }
 
@@ -371,7 +402,7 @@ nav.scrolled .logo{
 @media (max-width:450px){
 
     html{
-        font-size: 50%;
+        font-size: 80%;
     }
 }
 
