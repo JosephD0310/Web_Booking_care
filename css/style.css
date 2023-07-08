@@ -494,7 +494,7 @@ h1 {
     flex-wrap: wrap;
     /* gap: 10px; */
     width: 100%;
-    padding: 50px auto;
+    margin: 30px auto;
 }
 
 .sp-y-te .container .product-btn{
@@ -507,6 +507,7 @@ h1 {
     box-shadow: 0 5px 15px 1px rgba(0, 0, 0, 0.1);
     border: 2px ;
     margin: 0 1rem;
+    padding: 8px;
     letter-spacing: 0.5px;
     color: var(--text-color);
     font-weight: 500;
@@ -521,8 +522,11 @@ h1 {
 
 
 .sp-y-te .container .product-btn .image img{
+
     margin: 5px;
-    max-width: 60px;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
 }
 
 .sp-y-te .container .product-btn .text{
@@ -530,6 +534,7 @@ h1 {
     color: var(--text-color);
     /* letter-spacing: 0.5px; */
     justify-content: center;
+    font-size: 80%;
 }
 
 
