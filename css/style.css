@@ -107,6 +107,7 @@ header .info{
 }
 
 .info .container .profile-tab{
+    /* position: relative; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -132,6 +133,7 @@ header .info{
     font-size: 25px;
     margin-left: -5px;
 }
+
 
 header .nav-bar{
     position: relative;
@@ -242,6 +244,16 @@ nav.scrolled .logo{
     display: none;
 }
 
+.nav-bar .container .profile-tab .menu-profile-tab{
+    position: absolute;
+    top: 100%; right: 2rem;
+    background-color: var(--bg-color);
+    backdrop-filter: blur(.4rem);
+    border-radius: .5rem;
+    /* transform: scale(0); */
+    transform-origin: top right ;
+    transition: .2s linear;
+}
 
 /* ---------------------  Showcase Area Styles --------------------- */
 
