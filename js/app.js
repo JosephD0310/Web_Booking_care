@@ -10,6 +10,13 @@ function stickyNavbar () {
 window.addEventListener("scroll", stickyNavbar)
 
 /* ---------------------  Menu bar --------------------- */
+let menu_profile = document.querySelector('.nav-bar .container .menu-profile-tab');
+
+document.querySelector('#user-ava').onclick = () =>{
+  menu_profile.classList.toggle('active');
+}
+
+/* ---------------------  Menu bar --------------------- */
 
 let navlink = document.querySelector('header .nav-bar .container .links');
 
