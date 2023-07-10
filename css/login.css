@@ -1,0 +1,88 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Mulish:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400&display=swap');
+/* ---------------------  Website Theme --------------------- */
+
+:root{
+    --hue-1: 150;
+    --hue-2: 219;
+    --gradient-color: linear-gradient(93deg, rgba(71,189,203,1) 0%, rgba(49,216,133,1) 100%);
+    --bg-color: hsl(var(--hue-1), 73%, 97%);
+    --main-color-soft: #f2fdf8;
+    --main-color-1: hsl(var(--hue-1), 68%, 50%);
+    --main-color-dark-1: hsl(var(--hue-1), 71%, 39%);
+    --main-color-2: hsl(var(--hue-2), 64%, 39%);
+    --main-color-dark-2: hsl(var(--hue-2), 83%, 33%);
+    --bg-color-1: hsl(var(--hue-1), 73%, 97%);
+    --bg-color-2: #fff;
+    --bg-color-3: hsl(var(--hue-1), 73%, 98%);
+    --bg-color-transparent: rgba(255, 255, 255, 0.821);
+    --text-color: hsl(var(--hue-2), 83%, 30%);
+
+}
+
+
+/* ---------------------  General Styles --------------------- */
+
+*, *::before, *::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    outline: none; border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    scrollbar-color: var(--main-color-1) var(--main-color-soft);
+    scrollbar-width: thin;
+}
+
+html{
+    font-size: 100%;
+    overflow-x: hidden ;
+    scroll-behavior: smooth;
+    scroll-padding-top: 5px;
+}
+
+body{
+    overflow-x: hidden;
+    background-color: var(--bg-color);
+    background-image: url('https://raw.githubusercontent.com/JosephD0310/Web_Booking_care/main/assets/bg-main.png');
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+::selection{
+    background-color: hsla(var(--hue-1), 71%, 44%, 0.9);
+    color: #fff;
+}
+
+*::-webkit-scrollbar{
+    height: .5rem;
+    width: 10px;
+ }
+ 
+ *::-webkit-scrollbar-track{
+    border-radius: 10px;
+    background-color: transparent;
+ }
+ 
+ *::-webkit-scrollbar-thumb{
+    border-radius: 10px;
+    background-color:#8bdfb9;
+ }
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+button.btn{
+    color: white;
+    background: rgb(71,189,203);
+    background: linear-gradient(93deg, rgba(71,189,203,1) 0%, rgba(49,216,133,1) 100%);
+    border-radius: 10px;
+}
