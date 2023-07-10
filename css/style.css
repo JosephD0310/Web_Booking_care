@@ -16,7 +16,6 @@
     --bg-color-2: #fff;
     --bg-color-3: hsl(var(--hue-1), 73%, 98%);
     --bg-color-transparent: rgba(255, 255, 255, 0.821);
-    --heading--color: ;
     --text-color: hsl(var(--hue-2), 83%, 30%);
 
 }

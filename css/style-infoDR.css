@@ -1,6 +1,4 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Mulish:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400&display=swap');
 /* ---------------------  Website Theme --------------------- */
 
 :root{
@@ -8,6 +6,7 @@
     --hue-2: 219;
     --gradient-color: linear-gradient(93deg, rgba(71,189,203,1) 0%, rgba(49,216,133,1) 100%);
     --bg-color: hsl(var(--hue-1), 73%, 97%);
+    --main-color-soft: #f2fdf8;
     --main-color-1: hsl(var(--hue-1), 68%, 50%);
     --main-color-dark-1: hsl(var(--hue-1), 71%, 39%);
     --main-color-2: hsl(var(--hue-2), 64%, 39%);
@@ -27,12 +26,21 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-
+    font-family: "Montserrat", sans-serif;
+    outline: none; border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    scrollbar-color: var(--main-color-1) var(--main-color-soft);
+    scrollbar-width: thin;
 }
 
 html{
+    font-size: 100%;
+    overflow-x: hidden ;
     scroll-behavior: smooth;
+    scroll-padding-top: 5px;
 }
+
 
 body{
     overflow-x: hidden;
@@ -50,31 +58,99 @@ body{
     color: #fff;
 }
 
+*::-webkit-scrollbar{
+    height: .5rem;
+    width: 10px;
+ }
+ 
+ *::-webkit-scrollbar-track{
+    border-radius: 10px;
+    background-color: transparent;
+ }
+ 
+ *::-webkit-scrollbar-thumb{
+    border-radius: 10px;
+    background-color:#8bdfb9;
+ }
+
 a{
     text-decoration: none;
 }
 
-header ul{
+ul{
     list-style: none;
 }
 
+button.btn{
+    color: white;
+    background: rgb(71,189,203);
+    background: linear-gradient(93deg, rgba(71,189,203,1) 0%, rgba(49,216,133,1) 100%);
+    border-radius: 10px;
+}
 /* ---------------------  Reusable CSS Code --------------------- */
 
-.info{
+header .info{
     position: relative;
     width: 100%;
-    padding: 10px 100px;
     margin: 0 auto;
+    padding: 3px 0 ;
     background-color: var(--main-color-1);
     color:#fff;
 }
+
+.info .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.info .container .profile-tab{
+    /* position: relative; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.info .container .profile-tab .username{
+    margin-right: 15px;
+    color: white;
+    font-weight: 500;
+} 
+
+.info .container .profile-tab .user-ava{
+    cursor: pointer;
+}
+
+.info .container .profile-tab .user-ava img{
+    margin-top: 5px;
+    width: 25px;
+    height: 25px;
+}
+
+.info .container .profile-tab .uil.uil-angle-down{
+    font-size: 25px;
+    margin-left: -5px;
+}
+
+
+header .nav-bar{
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    background-color: white;
+    color:#fff;
+}
+
 .container{
     position: relative;
     width: 100%;
-    padding: 0 180px;
+    max-width: 1300px;
+    padding: 0 20px;
     margin: 0 auto;
     /* background-color: #fff; */
 }
+
 
 .logo img{
     width: 250px;
@@ -93,11 +169,15 @@ header .logo{
     line-height: 55px;
 }
 
+span{
+    /* font-size: 20px; */
+    font-weight: 520;
+    color: var(--text-color);
+}
+
 /* ---------------------  Navbar Styles --------------------- */
 
-nav{
-    background-color: #fff;
-}
+
 
 nav.scrolled {
     background-color: var(--bg-color-transparent);
@@ -105,7 +185,7 @@ nav.scrolled {
     backdrop-filter: blur();
 }
 
-nav.container{
+nav .container{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -118,38 +198,21 @@ nav.scrolled .logo{
     line-height: 50px;
 }
 
-.info ul{
-    flex: 1;
-    display: flex;
-    justify-content: space-between;
-}
-
-.login{
-    display: inline-block;
-    /* text-transform: uppercase; */
-    font-size: 1rem;
-    letter-spacing: 0.5px;
-    color: #fff;
-    font-weight: 400;
-}
-
-
-.links ul{
-    display: flex;
-    align-items: center;
-    width: 100%;
-}
-
 .nav-link{
     position: relative;
     display: inline-block;
-    margin: 0 1rem;
+    margin-right: 1rem;
     /* text-transform: uppercase; */
     font-size: 1rem;
-    letter-spacing: 0.5px;
+    /* letter-spacing: 0.5px; */
     color: var(--text-color);
     font-weight: 520;
     transition: 0.3s;
+    cursor: pointer;
+}
+
+.nav-link .uil.uil-angle-down{
+    font-size: 20px;
 }
 
 .nav-link::after{
@@ -171,6 +234,80 @@ nav.scrolled .logo{
 .nav-link:hover::after{
     width: 100%;
 }
+
+#menu-btn{
+    padding-right: 0.5rem;
+    font-size: 25px;
+    font-weight: 800;
+    cursor: pointer;
+    color: var(--text-color);
+    display: none;
+}
+
+.nav-bar .container .menu-profile-tab{
+    position: absolute;
+    top: 0%; right: 2rem;
+    /* max-width: 160px; */
+    background-color: var(--bg-color);
+    backdrop-filter: blur(.4rem);
+    border-radius: .5rem;
+    transform: scale(0);
+    transform-origin: top right ;
+    transition: .1s linear;
+    background-color: var(--bg-color-transparent);
+    box-shadow: 0 5px 20px 0.1px rgba(0, 0, 0, 0.1);
+} 
+
+.nav-bar .container .menu-profile-tab.active{
+    transform: scale(1);
+}
+
+.nav-bar .container .menu-profile-tab #menu-opt{
+    display: block;
+    padding: .5rem 1.5rem;
+    margin: 1.5rem .5rem;
+    color: var(--text-color);
+    border-radius: .5rem;
+    transition: .2s;
+}
+
+.nav-bar .container .menu-profile-tab #menu-opt:hover{
+    background-color: var(--main-color-1);
+    color: white;
+}
+
+.nav-bar .container .links .menu-booking-opt{
+    position: absolute;
+    top: 100%; right: 28rem;
+    /* max-width: 160px; */
+    background-color: var(--bg-color);
+    backdrop-filter: blur(.4rem);
+    border-radius: .5rem;
+    transform: scale(0);
+    transform-origin: top ;
+    transition: .1s linear;
+    background-color: var(--bg-color-transparent);
+    box-shadow: 0 5px 20px 0.1px rgba(0, 0, 0, 0.1);
+} 
+
+.nav-bar .container .links .menu-booking-opt.active{
+    transform: scale(1);
+}
+
+.nav-bar .container .links .menu-booking-opt .booking-opt{
+    display: block;
+    padding: .5rem 1.5rem;
+    margin: 1.5rem .5rem;
+    color: var(--text-color);
+    border-radius: .5rem;
+    transition: .2s;
+}
+
+.nav-bar .container .links .menu-booking-opt .booking-opt:hover{
+    background-color: var(--main-color-1);
+    color: white;
+}
+
 
 
 /* ---------------------  Showcase Area Styles --------------------- */
@@ -335,7 +472,7 @@ span{
     
 }
 
-.uil-schedule{
+.booking .container .head .icon-schedule .uil-schedule{
     font-size: 30px;
 }
 

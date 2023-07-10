@@ -9,7 +9,7 @@ function stickyNavbar () {
 }
 window.addEventListener("scroll", stickyNavbar)
 
-/* ---------------------  Menu bar --------------------- */
+/* ---------------------  Menu Profile --------------------- */
 let menu_profile = document.querySelector('.nav-bar .container .menu-profile-tab');
 
 document.querySelector('#user-ava').onclick = () =>{
